@@ -1,4 +1,5 @@
 package tests.demoqa;
+
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
@@ -7,8 +8,11 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
-public class RegistrationFormTests {
+
+public class RegistrationFormTests extends TestBase {
+
     Faker faker = new Faker();
+
     String firstName = faker.name().firstName(),
             lastName = faker.name().lastName(),
             email = faker.internet().emailAddress(),
@@ -26,6 +30,7 @@ public class RegistrationFormTests {
             currentAddress = faker.address().fullAddress(),
             state = "Uttar Pradesh",
             city = "Merrut";
+
     @Test
     void successfulFillFormTest() {
         step("Open students registration form", () -> {
