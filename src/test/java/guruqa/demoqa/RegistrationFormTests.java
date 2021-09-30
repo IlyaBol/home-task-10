@@ -1,4 +1,4 @@
-package guruqa;
+package guruqa.demoqa;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 import guruqa.TestBase;
