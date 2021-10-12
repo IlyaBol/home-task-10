@@ -7,13 +7,14 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
-public class MaxilectTest{
+public class MaxilectTest extends TestBase {
     @Test()
     void headerTest() {
         step("Open https://maxilect.com/", () ->
