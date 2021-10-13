@@ -28,7 +28,8 @@ public class TestBase {
         String login = credentials.login();
         String password = credentials.password();
         Configuration.baseUrl = "https://demoqa.com";
-        String url = System.getProperty("REMOTE_URL");
+        String url = System.getProperty("remoteUrl");
+        System.out.println(url);
         Configuration.remote = String.format("https://%s:%s@%s", login, password, url);
 
 
