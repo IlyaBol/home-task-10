@@ -29,7 +29,7 @@ public class TestBase {
         Configuration.startMaximized = true;
         String login = credentials.login();
         String password = credentials.password();
-        String url = System.getProperty("REMOTE_URL");
+        String url = System.getProperty("remote");
         Configuration.remote = format("https://%s:%s@%s", login, password, url);
 
 
