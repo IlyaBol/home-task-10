@@ -16,7 +16,7 @@ public class OwnerTests {
     void readCredentialTest() {
         String login = credentials.login();
         String password = credentials.password();
-        String Url = System.getProperty("selenoid.autotests.cloud/wd/hub/");
+        String Url = System.getProperty("Url", "selenoid.autotests.cloud/wd/hub/");
 
 
         System.out.println(login);

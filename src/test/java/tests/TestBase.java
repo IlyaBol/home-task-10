@@ -28,8 +28,7 @@ public class TestBase {
         String login = credentials.login();
         String password = credentials.password();
         Configuration.baseUrl = "https://demoqa.com";
-        String url = System.getProperty("remoteUrl");
-        System.out.println(url);
+        String url = System.getProperty("remoteUrl", "selenoid.autotests.cloud/wd/hub/");
         Configuration.remote = String.format("https://%s:%s@%s", login, password, url);
 
 
