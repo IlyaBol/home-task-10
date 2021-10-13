@@ -10,8 +10,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import static java.lang.String.format;
-
 
 public class TestBase {
     public static CredentialsConfig credentials =
@@ -31,7 +29,7 @@ public class TestBase {
         String password = credentials.password();
         Configuration.baseUrl = "https://demoqa.com";
         String url = System.getProperty("remote");
-        Configuration.remote = format("https://%s:%s@%s", login, password, url);
+        Configuration.remote = String.format("https://%s:%s@%s", login, password, url);
 
 
     }
