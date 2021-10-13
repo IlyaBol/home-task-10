@@ -18,7 +18,6 @@ public class OwnerTests {
         String password = credentials.password();
         String url = System.getProperty("REMOTE_URL");
 
-
         System.out.println(login);
         System.out.println(password);
         String message = format("https://%s:%s@%s", login, password, url);
