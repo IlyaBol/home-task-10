@@ -16,10 +16,12 @@ public class OwnerTests {
     void readCredentialTest() {
         String login = credentials.login();
         String password = credentials.password();
+        String url = System.getProperty("REMOTE_URL");
+
 
         System.out.println(login);
         System.out.println(password);
-        String message = format("i login as %s with password %s", login, password);
+        String message = format("https://%s:%s@%s", login, password, url);
         System.out.println(message);
     }
 }
