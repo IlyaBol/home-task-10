@@ -16,11 +16,12 @@ public class OwnerTests {
     void readCredentialTest() {
         String login = credentials.login();
         String password = credentials.password();
+        String Url = System.getProperty("selenoid.autotests.cloud/wd/hub/");
 
 
         System.out.println(login);
         System.out.println(password);
-        String message = format("https://%s:%s@%s", login, password);
+        String message = format("https://%s:%s@%s", login, password, Url);
         System.out.println(message);
     }
 }
