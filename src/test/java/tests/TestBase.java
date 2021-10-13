@@ -29,6 +29,7 @@ public class TestBase {
         Configuration.startMaximized = true;
         String login = credentials.login();
         String password = credentials.password();
+        Configuration.baseUrl = "https://demoqa.com";
         String url = System.getProperty("remote");
         Configuration.remote = format("https://%s:%s@%s", login, password, url);
 
